@@ -88,7 +88,7 @@ class Neural_network(object):
             for cell in range(len(self.neural_network[layer])):
                 self.neural_network[layer][cell].back_forward(self.neural_network[layer+1],self.neural_network[layer-1],cell,l)
 
-if __name__ == '__main__':
+if __name__ != '__main__':
     network = Neural_network(4,6,3,1)
     l = 0.05
     X = []
@@ -119,12 +119,12 @@ if __name__ == '__main__':
             m += 1
             '''
     print(m)
-    #'''
+    '''
     plt.scatter(x_label,y_label,c='blue', s=16)
     plt.scatter(y_label, y_label, c='red', s=16)
     plt.show()
-    #'''
-if __name__ != '__main__':
+    '''
+if __name__ == '__main__':
     network = Neural_network(3,5,3,1)
     l = 0.005
     X = []
